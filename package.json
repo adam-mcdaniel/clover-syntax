@@ -2,7 +2,7 @@
   "name": "clover-syntax",
   "displayName": "clover-syntax",
   "description": "Syntax highlighting for the Clover programming language",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.97.0"
   },

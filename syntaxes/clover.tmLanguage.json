@@ -56,7 +56,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.clover",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|else|while|for|return|continue|break)\\b"
 			},
 			{
 				"name": "storage.type.clover",
