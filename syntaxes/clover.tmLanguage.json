@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Clover",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#declarations"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#userTypes"
+		},
+		{
+			"include": "#functionCalls"
+		},
+		{
+			"include": "#sizeFunctions"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#chars"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.clover",
+				"match": "\\b(if|while|for|return)\\b"
+			},
+			{
+				"name": "storage.type.clover",
+				"match": "\\b(Char|Bool|Float|Cell|Int)\\b"
+			}]
+		},
+		"declarations": {
+			"patterns": [{
+				"name": "keyword.declaration.clover",
+				"match": "\\b(extern|fun|let|mut|type|struct|enum|union)\\b"
+			}]
+		},
+		"sizeFunctions": {
+			"patterns": [{
+				"name": "keyword.function.builtin.clover",
+				"match": "\\b(sizeof|lengthof)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "storage.type.clover",
+				"match": "\\b(Char|Bool|Float|Cell|Int)\\b"
+			}]
+		},
+		"userTypes": {
+			"patterns": [{
+				"name": "entity.name.type.clover",
+				"match": "\\b[A-Z][a-zA-Z0-9_]*\\b"
+			}]
+		},
+		"functionCalls": {
+			"patterns": [{
+				"name": "entity.name.function.clover",
+				"match": "\\b[a-z_][a-zA-Z0-9_]*\\s*(?=\\()"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.clover",
+				"match": "\\b(0b[01]+|0x[0-9a-fA-F]+|0o[0-7]+|\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b"
+			}]
+		},
+		"chars": {
+			"name": "string.quoted.single.clover",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.clover",
+					"match": "\\\\."
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.clover",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.clover",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.clover"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "clover-syntax",
+  "displayName": "clover-syntax",
+  "description": "Syntax highlighting for the Clover programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adam-mcdaniel/clover-syntax"
+  },
+  "contributes": {
+    "languages": [{
+      "id": "clover",
+      "aliases": ["Clover", "clover"],
+      "extensions": [".clover",".clv",""],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "clover",
+      "scopeName": "source.clover",
+      "path": "./syntaxes/clover.tmLanguage.json"
+    }]
+  }
+}
