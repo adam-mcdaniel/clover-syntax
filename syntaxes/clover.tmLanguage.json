@@ -3,6 +3,9 @@
 	"name": "Clover",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -31,6 +34,25 @@
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.clover",
+					"match": "//.*"
+				},
+				{
+					"name": "comment.block.clover",
+					"begin": "/\\*",
+					"end": "\\*/",
+					"patterns": [
+						{
+							"name": "comment.block.documentation.clover",
+							"match": "\\*\\*.*"
+						}
+					]
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.clover",

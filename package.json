@@ -2,13 +2,14 @@
   "name": "clover-syntax",
   "displayName": "clover-syntax",
   "description": "Syntax highlighting for the Clover programming language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.97.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "publisher": "AdamRyanMcDaniel",
   "repository": {
     "type": "git",
     "url": "https://github.com/adam-mcdaniel/clover-syntax"
